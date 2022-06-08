@@ -78,13 +78,13 @@
             <div class="col-md-9">
                 <div class="row">
 
-                  {% for image in pics %}
+                  {% for pic in pics %}
                     <div class="col-md-4">
                         <div class="card my-2">
-                            <img class="image-thumbail" src="{{image.image.url}}" alt="Card image cap">
+                            <img class="image-thumbail" src="{{pic.image.url}}" alt="Card image cap">
 
                             <div class="card-body">
-                                <small> {{image.imgdesc}}</small>
+                                <small> {{pic.imgdesc}}</small>
                             </div>
                             <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm m-1">View</a>
                         </div>
