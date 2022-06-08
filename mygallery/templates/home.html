@@ -78,10 +78,10 @@
             <div class="col-md-9">
                 <div class="row">
 
-                  {% for results in pics %}
+                  {% for mygallery in pics %}
                     <div class="col-md-4">
                         <div class="card my-2">
-                            <img class="image-thumbail" src="{{results.image.url}}" alt="Card image cap">
+                            <img class="image-thumbail" src="{{mygallery.image.url}}" alt="Card image cap">
 
                             <div class="card-body">
                                 <small> {{results.imgdesc}}</small>
