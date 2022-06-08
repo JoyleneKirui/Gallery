@@ -13,7 +13,7 @@ Gallery is a photo gallery web application to showcase beautiful pictures. Users
 - Admin can upload images from a django dashboard.
 
 # Live link
-Lhttps://mygallery.herokuapp.com/
+Lhttps://myfavoritegallery.herokuapp.com/
 
 # Requirements
 The Galleria project requires a prerequisite understanding of the following:
@@ -27,7 +27,7 @@ The Galleria project requires a prerequisite understanding of the following:
 - Python virtualenv
 
 # Setup and Installation
-##### Clone repo (git clone https://github.com/JoyleneKIrui/Gallery.git)
+##### Clone repo (git clone https://github.com/JoyleneKirui/Gallery.git)
 
 ####  Create and Activate virtual environment
 -python3 -m venv virtual
