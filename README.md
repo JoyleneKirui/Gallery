@@ -13,7 +13,7 @@ Gallery is a photo gallery web application to showcase beautiful pictures. Users
 - Admin can upload images from a django dashboard.
 
 # Live link
-Lhttps://myfavoritegallery.herokuapp.com/
+https://myfavoritegallery.herokuapp.com/
 
 # Requirements
 The Galleria project requires a prerequisite understanding of the following:
