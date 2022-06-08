@@ -30,7 +30,6 @@ def displayimage(request):
 #     return render(request, 'home.html', context)
 
 
-def viewPhoto(request, image_id):
-    picss = pics.get_image_by_id(image_id)
+def viewPhoto(request):
    
     return render(request, 'single.html')
