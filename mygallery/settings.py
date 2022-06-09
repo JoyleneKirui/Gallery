@@ -14,6 +14,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import django_heroku
 import os
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,15 +79,14 @@ WSGI_APPLICATION = 'mygallery.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'moringa',
-        'PASSWORD': '12345678',
-        'HOST': 'localhost',
-    }
+DATABASES = {     
+'default': {
+ 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+ 'NAME': 'moringa',
+ 'PASSWORD': 'Access',
+ 'HOST': 'localhost',
+ 'PORT': '5000'  
+} 
 }
 DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
 
@@ -138,4 +139,17 @@ DJANGORESIZED_DEFAULT_KEEP_META = True
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'PNG': ".png"}
 
+
+ON_HEROKU = os.environ.get('ON_HEROKU')
+HEROKU_SERVER = os.environ.get('HEROKU_SERVER')
+
+
+if ON_HEROKU:
+    DATABASE_URL = 'postgresql://<postgresql>'
+else:
+    DATABASE_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+
+DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+
 django_heroku.settings(locals())
+

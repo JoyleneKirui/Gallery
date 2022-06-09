@@ -78,7 +78,8 @@
             <div class="col-md-9">
                 <div class="row">
 
-                  {% for photo in pics %}
+                  {% for photo in mygallery
+                   %}
                     <div class="col-md-4">
                         <div class="card my-2">
                             <img class="image-thumbail" src="{{photo.image.url}}" alt="Card image cap">
